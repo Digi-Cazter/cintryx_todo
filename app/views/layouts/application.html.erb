@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CintryxTodo</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title><%= "#{yield(:title)} :: " if content_for? :title %>Cintryx To-Do Tracker</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body class="<%= 'logged-in' if user_signed_in? %>">
+  <div class="container">
+    <%= yield %>
+    <% if user_signed_in? %>
+      <br />
+      <div class="text-align-center">
+        This app created with <span style="color: red;" class="glyphicon glyphicon-heart"></span> from Donavan White
+      </div>
+    <% end %>
+  </div>
 </body>
 </html>
