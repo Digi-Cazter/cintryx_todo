@@ -1,3 +1,53 @@
-// Place all the styles related to the todos controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.todolist{
+    background-color:#FFF;
+    padding:20px 20px 10px 20px;
+}
+.todolist h1{
+    margin:0;
+    padding-bottom:20px;
+    text-align:center;
+}
+.form-control{
+    border-radius:0;
+}
+li.ui-state-default{
+    background:#fff;
+    border:none;
+    border-bottom:1px solid #ddd;
+}
+
+.todo-footer{
+    background-color:#F4FCE8;
+    margin:0 -20px -10px -20px;
+    padding: 10px 20px;
+}
+#completed_todos li{
+    padding:10px 0;
+    border-bottom:1px solid #ddd;
+    text-decoration:line-through;
+}
+#completed_todos li:last-child{
+    border-bottom:none;
+}
+#checkAll{
+    margin-top:10px;
+}
+
+.ui-state-highlight {
+    border: 1px solid #AAA;
+    background: rgba(140,140,140,0.2);
+}
+
+@media (min-width: 0px) {
+  .back-to-lists-btn {
+    margin: auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .back-to-lists-btn {
+    margin: 15px;
+    width: auto;
+  }
+}

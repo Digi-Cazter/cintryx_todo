@@ -3,7 +3,7 @@
     <label>
       <span class="glyphicon glyphicon-menu-hamburger drag-handle" style="color: #CCC;"></span>&nbsp;&nbsp;&nbsp;
       <%= link_to icon("trash"), list_path(list), class: "glyphicon", style: "color: red;", data: {confirm: "Are you sure?", method: :delete, remote: true} %>&nbsp;&nbsp;
-      <%= link_to list.name, list_todos_path(list) %>
+      <%= link_to list.name, list_todos_path(list), style: "color: #337ab7;" %>
     </label>
   </div>
 </li>

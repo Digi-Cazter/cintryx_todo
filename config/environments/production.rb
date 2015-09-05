@@ -86,4 +86,5 @@ Rails.application.configure do
     :host => "http://todo-tracker.herokuapp.com"
   }
   config.action_mailer.default_url_options = { :host => 'http://todo-tracker.herokuapp.com' }
+  config.asset_host = 'http://todo-tracker.herokuapp.com'
 end
