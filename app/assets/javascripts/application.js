@@ -12,4 +12,21 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require bootstrap-sprockets
+
+$(document).ready(function(){
+  $( "#lists.sortable" ).sortable({
+    placeholder: "ui-state-highlight",
+    handle: ".drag-handle",
+    forcePlaceholderSize: true,
+    update: function( event, ui ) {
+      $.ajax({
+        url: "/lists/"+ui.item.attr("data-id"),
+        method: "PUT",
+        data: {list: {position: ui.item.index()+1}}
+      });
+    }
+  });
+  $( ".sortable" ).disableSelection();
+});
