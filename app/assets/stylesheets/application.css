@@ -14,5 +14,6 @@
  *= require bootstrap
  *= require main
  *= require login
+ *= require lists
  *= require_self
  */

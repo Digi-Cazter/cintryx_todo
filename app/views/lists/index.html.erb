@@ -1,0 +1,30 @@
+<%= content_for :title, "Lists" %>
+
+<div class='main-panel'>
+  <%= render 'layouts/partials/header' %>
+
+  <div class="row">
+    <%= form_for List.new, remote: true do |f| %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <div class="col-md-10">
+        <%= f.text_field :name, placeholder: "Add new list", class: "form-control" %>
+      </div>
+      <div class="col-md-2">
+        <%= f.submit "Add", class: "btn btn-success col-xs-12" %>
+      </div>
+    <% end %>
+  </div><br />
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="well">
+        <div class="todolist not-done">
+          <h1>Lists</h1>
+          <ul id="lists" class="list-unstyled sortable">
+            <%= render @lists %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

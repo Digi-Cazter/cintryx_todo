@@ -1,0 +1,9 @@
+<li class="ui-state-default" data-id="<%= list.id %>">
+  <div class="checkbox">
+    <label>
+      <span class="glyphicon glyphicon-menu-hamburger drag-handle" style="color: #CCC;"></span>&nbsp;&nbsp;&nbsp;
+      <%= link_to icon("trash"), list_path(list), class: "glyphicon", style: "color: red;", data: {confirm: "Are you sure?", method: :delete, remote: true} %>&nbsp;&nbsp;
+      <%= list.name %>
+    </label>
+  </div>
+</li>
