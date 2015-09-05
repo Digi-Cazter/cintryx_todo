@@ -1,0 +1,8 @@
+<li class="ui-state-default" data-list-id="<%= @list.id %>" data-id="<%= todo.id %>">
+  <div class="checkbox">
+    <label>
+      <span class="glyphicon glyphicon-menu-hamburger drag-handle" style="color: #CCC; padding-top: 2px;"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <%= check_box_tag :todo, :is_complete, todo.is_complete, onclick: "check_todo(#{@list.id}, #{todo.id}, this);" %><%= todo.description %>
+    </label>
+  </div>
+</li>

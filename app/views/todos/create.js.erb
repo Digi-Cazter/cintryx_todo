@@ -1,0 +1,3 @@
+$('#todos').append("<%= j(render 'todo', todo: @todo).html_safe %>");
+$('#new_todo')[0].reset();
+countTodos();

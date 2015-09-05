@@ -1,0 +1,1 @@
+<li data-id="<%= todo.id %>"><%= todo.description %> <%= link_to icon("remove"), list_todo_path(@list, todo), class: "remove-item btn btn-default btn-xs pull-right", method: :delete, remote: true %>

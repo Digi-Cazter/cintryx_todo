@@ -14,6 +14,9 @@ gem 'omniauth-google-oauth2'
 gem 'pg'
 gem 'acts_as_list'
 
+# Edit in place
+gem 'best_in_place', '~> 3.0.1'
+
 # Assets
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'

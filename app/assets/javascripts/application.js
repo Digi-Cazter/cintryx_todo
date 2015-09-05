@@ -14,8 +14,11 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require bootstrap-sprockets
+//= require best_in_place
+//= require todos
 
 $(document).ready(function(){
+  $(".best_in_place").best_in_place();
   $( "#lists.sortable" ).sortable({
     placeholder: "ui-state-highlight",
     handle: ".drag-handle",
@@ -28,5 +31,18 @@ $(document).ready(function(){
       });
     }
   });
+  $( "#todos.sortable" ).sortable({
+    placeholder: "ui-state-highlight",
+    handle: ".drag-handle",
+    forcePlaceholderSize: true,
+    update: function( event, ui ) {
+      $.ajax({
+        url: "/lists/"+ui.item.attr("data-list-id")+"/todos/"+ui.item.attr("data-id"),
+        method: "PUT",
+        data: {todo: {position: ui.item.index()+1}}
+      });
+    }
+  });
   $( ".sortable" ).disableSelection();
+  countTodos()
 });

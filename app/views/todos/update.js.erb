@@ -1,0 +1,3 @@
+$("#todos").html("<%= j(render @list.todos.not_completed).html_safe %>");
+$("#completed_todos").html("<%= j(render partial: 'completed_todo', collection: @list.todos.completed, as: :todo).html_safe %>");
+countTodos();
