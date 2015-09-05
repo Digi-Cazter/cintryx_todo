@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+//= require jquery.ui.touch-punch.min
 //= require bootstrap-sprockets
 //= require best_in_place
 //= require todos
